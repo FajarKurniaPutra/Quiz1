@@ -20,22 +20,22 @@ void main() {
 
   // Menghitung Total Belanja menggunakan fungsi hitungTotal
   double totalAwal = hitungTotal(hargaBarang);
-
+  // Deklarasi variabel diskonPersen
   double diskonPersen = 0;  
 
   // Null Safety memakai variubel null-safe access
   String? pesanDiskon; 
 
   // Kontrol percabangan if, else if, dan else
-  //Jika total lebih dari 200000, maka diskon 10%
+  // Jika total lebih dari 200000, maka diskon 10%
   if (totalAwal > 200000) {
     diskonPersen = 0.10;
     pesanDiskon = "Selamat! Anda mendapatkan diskon 10%.";
-  //Jika total lebih dari 100000, maka diskon 5%
+  // Jika total lebih dari 100000, maka diskon 5%
   } else if (totalAwal >= 100000) {
     diskonPersen = 0.05;
     pesanDiskon = "Selamat! Anda mendapatkan diskon 5%.";
-  //Jika total kurang dari 100000, maka tidak mendapatkan diskon
+  // Jika total kurang dari 100000, maka tidak mendapatkan diskon
   } else {
     diskonPersen = 0;
     pesanDiskon = "Maaf, Anda tidak mendapatkan diskon.";
@@ -52,7 +52,7 @@ void main() {
   // Menggunakan operator ! karena sudah pasti terisi
   print("Keterangan   : ${pesanDiskon!}"); 
   print("-----------------------------------------");
-  // print nilai dari desima ke string dengan tambahan 2 angka di belakang koma
+  // Print nilai dari desima ke string dengan tambahan 2 angka di belakang koma
   print("Total Awal   : Rp ${totalAwal.toStringAsFixed(2)}");
   print("Besar Diskon : Rp ${besarDiskon.toStringAsFixed(2)}");
   print("Total Akhir  : Rp ${totalAkhir.toStringAsFixed(2)}");
